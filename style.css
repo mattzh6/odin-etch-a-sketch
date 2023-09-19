@@ -1,0 +1,15 @@
+.rows {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.square {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+.drawn {
+    background-color: grey;
+}
