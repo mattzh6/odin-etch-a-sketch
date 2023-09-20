@@ -23,8 +23,8 @@ function resizeGrid(dimension) {
         for (let j = 0; j < dimension; j++) {
             const square = document.createElement("div");
             square.classList.add("square")
-            square.style.width = 960/dimension + "px";
-            square.style.height = 960/dimension + "px";
+            square.style.width = space/dimension + "px";
+            square.style.height = space/dimension + "px";
             div.appendChild(square);
         }
         divContainer.appendChild(div);
@@ -39,7 +39,12 @@ function resizeGrid(dimension) {
 resizeGrid(16);
 
 function changeColor(e) {
-    this.classList.add("drawn");
+    // Create R G B values by multiply random with the possible RGB values i.e. 0-255
+    const r = Math.ceil(Math.random() * 255);
+    const g = Math.ceil(Math.random() * 255);
+    const b = Math.ceil(Math.random() * 255);
+    this.style.backgroundColor = `rgb(${r},${g},${b})`;
+
 }
 
 
